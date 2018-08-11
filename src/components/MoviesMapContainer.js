@@ -4,7 +4,7 @@ import MoviesMap from "./MoviesMap";
 export default class MoviesMapContainer extends Component {
 	render() {
         const googleMapApiKey = process.env.REACT_APP_GOOGLE_MAP
-        console.log(process.env);
+
 		return (
 			<MoviesMap
 				movies={this.props.movies}
