@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import { Container, Divider, Grid, Header, Icon } from 'semantic-ui-react'
+import { Container, Grid, Header } from 'semantic-ui-react'
 import MoviesMapContainer from './components/MoviesMapContainer';
+import MovieSearch from './components/MovieSearch';
 
 class App extends Component {
   render() {
     return (
-		<div className="App">
+		<Container className="App" style={{ marginTop: '3em', width: '90vw' }}>
+			<Header as='h2' textAlign='center'>
+				Google Map Demo
+			</Header>
 			<Grid>
 				<Grid.Row>
 					<Grid.Column width={12}>
@@ -15,13 +17,11 @@ class App extends Component {
 					</Grid.Column>
 
 					<Grid.Column width={4}>
-						<p>
-							<span>4</span>
-						</p>
+						<MovieSearch />
 					</Grid.Column>
 				</Grid.Row>
 			</Grid>
-		</div>
+		</Container>
     );
   }
 }
