@@ -7,7 +7,7 @@ export default class MoviesMapContainer extends Component {
 
 		return (
 			<MoviesMap
-				movies={this.props.movies}
+				markers={this.props.markers}
 				googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${googleMapApiKey}&v=3.exp&libraries=geometry,drawing,places`}
 				loadingElement={<div style={{ height: `100%` }} />}
 				containerElement={<div style={{ height: `90vh`, width: `100%` }} />}
