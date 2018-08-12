@@ -31,11 +31,11 @@ class App extends Component {
 
 	render() {
 		return (
-			<Container className="App" style={{ marginTop: '3em', width: '95vw' }}>
-				<Header as='h2' textAlign='center'>
+			<Container className="App" style={{ marginTop: '1.5em', width: '95vw' }}>
+				<Header as='h2' style={{textAlign: `center`, position:`fixed`, width: `100%`}}>
 					Google Map Demo
 				</Header>
-				<Grid>
+				<Grid style={{ position: `fixed`, top: `10vh`, height: `95vh`}}>
 					<Grid.Row>
 						<Grid.Column width={12}>
 							<MoviesMapContainer 
@@ -43,7 +43,7 @@ class App extends Component {
 							/>
 						</Grid.Column>
 
-						<Grid.Column width={4}>
+						<Grid.Column width={4} style={{ overflowY:`scroll`, overflowX:`hidden` }}>
 							<MovieSearch />
 							<MoviesList 
 								handleOnClick={this.handleOnClick}

@@ -11,7 +11,7 @@ export default class MoviesMapContainer extends Component {
 				googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${googleMapApiKey}&v=3.exp&libraries=geometry,drawing,places`}
 				loadingElement={<div style={{ height: `100%` }} />}
 				containerElement={<div style={{ height: `90vh`, width: `100%` }} />}
-				mapElement={<div style={{ height: `100%` }} />}
+				mapElement={<div style={{ height: `100%`, width: `100%`, top: 0 }} />}
 			/>
 		);
 	}
