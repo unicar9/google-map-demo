@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, Item } from 'semantic-ui-react';
+import { Item } from 'semantic-ui-react';
 
 const MovieItem = (props) => (
     <Item>
