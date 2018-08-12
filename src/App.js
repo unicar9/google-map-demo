@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import { Container, Grid, Header } from 'semantic-ui-react'
 import MoviesMapContainer from './components/MoviesMapContainer';
 import MovieSearch from './components/MovieSearch';
+import MoviesList from './components/MoviesList';
 
 class App extends Component {
   render() {
     return (
-		<Container className="App" style={{ marginTop: '3em', width: '90vw' }}>
+		<Container className="App" style={{ marginTop: '3em', width: '95vw' }}>
 			<Header as='h2' textAlign='center'>
 				Google Map Demo
 			</Header>
@@ -18,6 +19,7 @@ class App extends Component {
 
 					<Grid.Column width={4}>
 						<MovieSearch />
+						<MoviesList />
 					</Grid.Column>
 				</Grid.Row>
 			</Grid>

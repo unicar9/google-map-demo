@@ -17,6 +17,15 @@ class MovieSearch extends Component {
 
     handleOnClick() {
         console.log(this.state.inputValue);
+        const showtimesApi = process.env.REACT_APP_SHOWTIMES_API
+
+        fetch(`https://api.internationalshowtimes.com/v4/showtimes?apikey=${showtimesApi}&movie_id=18047&location=-33.86785,151.20732&distance=50`, {
+            method: 'GET',
+        })
+        .then(res => res.json())
+        .then(function(data) {
+            console.log(data);
+        })
     }
     
     render() {
