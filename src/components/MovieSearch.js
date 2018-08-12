@@ -10,8 +10,6 @@ class MovieSearch extends Component {
     }
 
     handleOnChange(e) {
-        console.log(e.target.value);
-
         this.setState({
             inputValue: e.target.value
         });
