@@ -13,4 +13,4 @@ const MovieItem = (props) => (
     </Item>
 )
   
-export default MovieItem
+export default MovieItem;

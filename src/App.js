@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Grid, Header } from 'semantic-ui-react'
+import { Container, Grid, Header } from 'semantic-ui-react';
 import MoviesMapContainer from './components/MoviesMapContainer';
 import MovieSearch from './components/MovieSearch';
 import MoviesList from './components/MoviesList';
@@ -22,7 +22,8 @@ class App extends Component {
         })
         .then(res => res.json())
         .then(data => {
-            console.log('movie show times', data.cinemas);
+            console.log('movie show times', data.showtimes);
+            console.log('movie cinemas', data.cinemas);
             this.setState({
                 cinemas: data.cinemas
             })

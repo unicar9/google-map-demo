@@ -11,7 +11,7 @@ class MoviesList extends Component {
         this.showtimesApi = process.env.REACT_APP_SHOWTIMES_API
     }
 
-    componentWillMount() {
+    componentDidMount() {
         fetch(`https://api.internationalshowtimes.com/v4/movies?apikey=${this.showtimesApi}&limit=20&fields=id,title,poster_image_thumbnail,synopsis,runtime`, {
             method: 'GET',
         })
@@ -33,7 +33,7 @@ class MoviesList extends Component {
         
         return (
             <Item.Group divided>
-                {this.state.items.map(item => 
+                {(this.state.items || []).map(item => 
                     <MovieItem 
                         key={item.id}
                         image={item.poster_image_thumbnail}
