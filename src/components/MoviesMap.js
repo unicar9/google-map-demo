@@ -12,7 +12,9 @@ const MoviesMap = withScriptjs(withGoogleMap((props) => {
                     <MovieMarker
                         key={cinema.id}
                         location={{ lat: cinema.location.lat, lng: cinema.location.lon }}
-                        isOpen={true}
+                        cinemaName={cinema.name}
+                        cinemaPhone={cinema.telephone}
+                        cinemaAddr={cinema.location.address.display_text}
                     />
                 )}
             </GoogleMap>
